@@ -1,0 +1,16 @@
+# 비밀 키
+.env
+.env.*
+!.env.example
+
+# Vercel / Python
+.vercel/
+__pycache__/
+*.pyc
+.venv/
+
+# 작업 파일 (제출 제외)
+_작업파일/테스트_결과_raw/
+# 작업 메모(제출 제외)
+TASK.md
+_작업파일/server.log

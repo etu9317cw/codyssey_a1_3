@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="대학교 에너지인력양성센터 안내 페이지. 프로그램 소개와 AI 문의 도우미로 담당 부서·처리 절차·준비 서류를 미리 확인하세요.">
+  <title>에너지인력양성센터 AI 안내 데스크</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 상단 고정 메뉴 -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <span class="brand-mark" aria-hidden="true">⚡</span>
+        <span class="brand-text">에너지인력양성센터</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav">
+        <a href="#home">홈</a>
+        <a href="#about">센터 소개</a>
+        <a href="#programs">프로그램</a>
+        <a href="#ask" class="nav-cta">AI 문의</a>
+        <a href="#faq">FAQ·문의</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환" title="다크 모드 전환">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. 메인 -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">대학교 에너지인력양성센터</p>
+        <h1>AI 안내 데스크</h1>
+        <p class="lead">프로그램 안내부터 문의 절차까지, 담당자에게 보내기 전에 먼저 물어보세요.<br>
+          문의 유형과 내용을 넣으면 AI가 <strong>담당 부서·처리 절차·준비 서류</strong>를 안내합니다.</p>
+        <div class="hero-actions">
+          <a href="#ask" class="btn btn-primary">AI에게 물어보기</a>
+          <a href="#programs" class="btn btn-ghost">프로그램 보기</a>
+        </div>
+        <ul class="hero-stats" aria-label="센터 운영 요약">
+          <li><span class="stat-num">3</span><span class="stat-label">운영 프로그램</span></li>
+          <li><span class="stat-num">3</span><span class="stat-label">담당 부서</span></li>
+          <li><span class="stat-num">24h</span><span class="stat-label">AI 안내</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. 센터 소개 -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">센터 소개</h2>
+        <p class="section-sub">에너지 분야 전문 인력을 키우기 위해 대학이 운영하는 교육·실습 지원 조직입니다.</p>
+        <div class="grid grid-3">
+          <article class="card card-num">
+            <span class="num">01</span>
+            <h3>교육</h3>
+            <p>에너지 산업 흐름에 맞춘 정규·단기 교육 과정을 열고, 수료 학생에게 수료증을 발급합니다.</p>
+          </article>
+          <article class="card card-num">
+            <span class="num">02</span>
+            <h3>실습·인턴십</h3>
+            <p>참여 기업과 연계한 현장실습·인턴십을 주선하고, 참여 학생의 출근부·학생인건비를 관리합니다.</p>
+          </article>
+          <article class="card card-num">
+            <span class="num">03</span>
+            <h3>네트워크</h3>
+            <p>세미나·특강·기업 설명회로 학생과 현장을 잇고, 학과 간 교류 모임을 지원합니다.</p>
+          </article>
+        </div>
+        <dl class="info-row">
+          <div><dt>운영 시간</dt><dd>학기 중 평일 09:00~18:00 (점심 12:00~13:00)</dd></div>
+          <div><dt>위치</dt><dd>공과대학 내 센터 사무실</dd></div>
+          <div><dt>문의 창구</dt><dd>구글 폼 접수 → 유형별 담당자 자동 전달</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 3. 프로그램 안내 -->
+    <section id="programs" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">프로그램 안내</h2>
+        <p class="section-sub">세 가지 프로그램을 운영합니다. 신청 시기와 서류는 공고마다 달라지므로 AI 문의 도우미로 미리 확인하세요.</p>
+        <div class="grid grid-3">
+          <article class="card program">
+            <span class="tag tag-green">교육</span>
+            <h3>교육 프로그램</h3>
+            <p>에너지 기초부터 산업 동향까지 다루는 정규 과정과 방학 단기 과정.</p>
+            <ul class="meta">
+              <li><b>대상</b> 전 학년 학부생·대학원생</li>
+              <li><b>기간</b> 학기 중 8주 / 방학 2주</li>
+              <li><b>신청</b> 모집 공고 → 신청서 제출 → 선발 안내</li>
+            </ul>
+            <a href="#ask" class="link-more" data-prefill="프로그램 문의">이 프로그램 AI에게 묻기 →</a>
+          </article>
+          <article class="card program">
+            <span class="tag tag-navy">실습</span>
+            <h3>인턴십·현장실습</h3>
+            <p>참여 기업에서 진행하는 현장실습. 출근부 기준으로 학생인건비가 지급됩니다.</p>
+            <ul class="meta">
+              <li><b>대상</b> 3학년 이상, 지도교수 확인 필요</li>
+              <li><b>기간</b> 4주 ~ 8주</li>
+              <li><b>신청</b> 기업 매칭 → 협약 → 실습 시작</li>
+            </ul>
+            <a href="#ask" class="link-more" data-prefill="학생인건비 문의">인건비·서류 AI에게 묻기 →</a>
+          </article>
+          <article class="card program">
+            <span class="tag tag-amber">특강</span>
+            <h3>세미나·특강</h3>
+            <p>산업체 전문가 초청 특강과 학생 발표 세미나. 사전 신청 없이 참여할 수 있습니다.</p>
+            <ul class="meta">
+              <li><b>대상</b> 누구나</li>
+              <li><b>기간</b> 월 1~2회</li>
+              <li><b>신청</b> 공지 확인 후 현장 참석</li>
+            </ul>
+            <a href="#ask" class="link-more" data-prefill="기타 문의">일정·장소 AI에게 묻기 →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. AI 문의 도우미 -->
+    <section id="ask" class="section">
+      <div class="container">
+        <h2 class="section-title">AI 문의 도우미</h2>
+        <p class="section-sub">문의 유형과 내용을 입력하면 담당 부서, 처리 절차, 준비 서류, 예상 소요 시간을 안내합니다.</p>
+
+        <div class="ask-layout">
+          <form class="card ask-form" id="askForm" novalidate>
+            <div class="field">
+              <label for="askType">문의 유형</label>
+              <select id="askType" name="type" required>
+                <option value="프로그램 문의">프로그램 문의</option>
+                <option value="학생인건비 문의">학생인건비 문의</option>
+                <option value="기타 문의">기타 문의</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="askQuestion">문의 내용</label>
+              <textarea id="askQuestion" name="question" rows="5" maxlength="1000"
+                placeholder="예: 현장실습 신청 기간과 준비 서류가 궁금해요" required></textarea>
+              <div class="field-foot">
+                <span class="hint" id="askHint">이름·학번·연락처 등 개인정보는 입력하지 마세요.</span>
+                <span class="counter"><span id="charCount">0</span>/1000</span>
+              </div>
+              <p class="field-error" id="askError" role="alert" hidden></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="askSubmit">
+              <span class="btn-label">안내 받기</span>
+              <span class="btn-loading" hidden><span class="spinner" aria-hidden="true"></span> 안내를 작성하고 있습니다…</span>
+            </button>
+            <p class="note-small">AI 안내는 참고용입니다. 금액·날짜·승인 여부는 담당자 안내가 우선합니다.</p>
+          </form>
+
+          <div class="card ask-result" id="askResult" aria-live="polite">
+            <div class="result-empty" id="resultEmpty">
+              <p class="result-empty-icon" aria-hidden="true">💬</p>
+              <p>왼쪽에 문의를 입력하고 <b>안내 받기</b>를 누르면<br>여기에 결과 카드가 표시됩니다.</p>
+            </div>
+            <div class="result-error" id="resultError" role="alert" hidden></div>
+            <div class="result-body" id="resultBody" hidden>
+              <div class="result-row">
+                <h4>담당 부서</h4>
+                <p class="dept" id="rDepartment"></p>
+              </div>
+              <div class="result-row">
+                <h4>처리 절차</h4>
+                <ol id="rSteps"></ol>
+              </div>
+              <div class="result-row">
+                <h4>준비 서류</h4>
+                <ul id="rDocuments"></ul>
+              </div>
+              <div class="result-row">
+                <h4>예상 소요</h4>
+                <p id="rDuration"></p>
+              </div>
+              <div class="result-notes">
+                <h4>확인 필요</h4>
+                <p id="rNotes"></p>
+                <a href="#faq" class="link-more">담당자에게 문의하기 →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAQ + 문의하기 -->
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">자주 묻는 질문</h2>
+        <p class="section-sub">자주 들어오는 문의를 모았습니다. 여기에 없으면 AI 문의 도우미나 문의하기 버튼을 이용하세요.</p>
+
+        <div class="accordion" id="faqList">
+          <details class="faq-item">
+            <summary>프로그램 신청은 언제, 어떻게 하나요?</summary>
+            <div class="faq-body">학기 시작 전후로 모집 공고가 올라옵니다. 공고에 안내된 기간 안에 신청서를 제출하면 선발 결과를 개별 안내합니다. 시기는 학기마다 달라질 수 있습니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>학생인건비는 언제 지급되나요?</summary>
+            <div class="faq-body">매월 말 출근부를 제출하면 담당자 확인 후 지급 요청이 올라가고, 보통 1~2주 뒤 지급됩니다. 출근부를 늦게 내면 다음 지급분으로 넘어갈 수 있습니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>출근부와 통장 사본은 매번 내야 하나요?</summary>
+            <div class="faq-body">출근부는 매월 제출합니다. 통장 사본은 최초 1회만 제출하고, 계좌가 바뀌면 다시 제출합니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>수료증은 어떻게 받나요?</summary>
+            <div class="faq-body">교육 프로그램 출석 기준을 채우면 종료 후 수료증을 발급합니다. 발급 요청은 문의하기 폼으로 접수하면 됩니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>세미나실을 빌릴 수 있나요?</summary>
+            <div class="faq-body">센터 프로그램 참여 학생의 학습 모임 목적이라면 신청할 수 있습니다. 승인 여부와 가능 시간은 센터 총괄 담당자가 확인 후 안내합니다.</div>
+          </details>
+        </div>
+
+        <div class="contact-box">
+          <div>
+            <h3>해결되지 않았나요?</h3>
+            <p>문의하기 폼으로 접수하면 접수 확인 메일이 바로 발송되고, 문의 유형별 담당자에게 자동으로 전달됩니다.</p>
+          </div>
+          <a class="btn btn-primary" id="contactLink" href="#" target="_blank" rel="noopener">문의하기 (구글 폼)</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><b>대학교 에너지인력양성센터 AI 안내 데스크</b></p>
+      <p>이 페이지의 AI 안내는 참고용이며, 확정 사항은 담당자 안내를 따릅니다. 입력한 문의 내용은 저장하지 않습니다.</p>
+      <p class="muted">© 2026 Energy Workforce Training Center · Vanilla HTML/CSS/JS + Vercel Python Serverless</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

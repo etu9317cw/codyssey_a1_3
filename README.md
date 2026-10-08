@@ -6,9 +6,10 @@
 | 항목 | 값 |
 |---|---|
 | 배포 URL | (Vercel 배포 후 기록) |
-| GitHub | (push 후 기록) |
+| GitHub | `https://github.com/etu9317cw/codyssey_a1_3` (push 후 공개) |
 | 서비스 기획서 | [`서비스_기획서.md`](./서비스_기획서.md) |
 | 증빙 | [`캡처_체크리스트.md`](./캡처_체크리스트.md), [`증빙_AI코딩도구_로그.md`](./증빙_AI코딩도구_로그.md), `evidence/` |
+| 요구사항 대조표 | [`서비스_기획서.md`](./서비스_기획서.md) 10장 (미션 원문 항목별 충족 여부·근거) |
 
 ## 왜 만들었나
 
@@ -72,6 +73,7 @@ API 키는 서버 함수에서만 쓰입니다. 브라우저는 `/api/ask`만 �
 ├── requirements.txt      # requests
 ├── vercel.json           # 함수 maxDuration 30초, 보안 헤더
 ├── .env.example          # 환경변수 이름과 설명 (값 없음)
+├── .gitignore            # .env·.vercel/·__pycache__·작업 메모 제외
 ├── 서비스_기획서.md
 ├── 증빙_AI코딩도구_로그.md
 ├── 캡처_체크리스트.md
@@ -89,7 +91,8 @@ API 키는 서버 함수에서만 쓰입니다. 브라우저는 `/api/ask`만 �
 
 - 로컬: `.env.example`을 `.env`로 복사해 값을 채웁니다. `.env`는 `.gitignore`에 있어 커밋되지 않습니다.
 - Vercel: Project → Settings → Environment Variables에 같은 이름 3개를 등록합니다. 값을 바꾸면 재배포가 필요합니다.
-- 키는 코드·README·캡처 어디에도 적지 않습니다. 유출이 의심되면 콘솔에서 폐기·재발급합니다.
+- 키는 코드·README·캡처 어디에도 적지 않습니다. 유출이 의심되면 콘솔에서 즉시 폐기·재발급합니다.
+- 키가 커밋에 들어갔다면 되돌리기 커밋만으로는 이력에 남으므로, `git filter-repo`(또는 BFG)로 해당 파일·문자열을 전체 이력에서 지운 뒤 강제 push하고 키를 재발급합니다. 이 저장소는 `.env`를 처음부터 `.gitignore`에 두어 커밋된 적이 없습니다(`git log --all -- .env` 0건).
 
 ## 로컬 실행
 
@@ -107,7 +110,7 @@ python _작업파일/local_server.py   # http://localhost:3000
 
 ## 배포 방법 (GitHub → Vercel)
 
-1. 이 저장소를 GitHub에 push합니다.
+1. 이 저장소를 GitHub 저장소 `codyssey_a1_3`에 push합니다.
 2. vercel.com에 GitHub 계정으로 로그인 → **Add New Project** → 이 저장소 Import.
 3. Framework Preset은 **Other**(빌드 명령 없음). `vercel.json`이 `api/ask.py`의 실행 시간을 30초로 잡습니다.
 4. Environment Variables에 위 3개를 등록하고 **Deploy**.

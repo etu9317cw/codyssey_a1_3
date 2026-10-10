@@ -6,8 +6,8 @@
 (function () {
   "use strict";
 
-  // 문의하기 구글 폼 (B3 문의 자동화와 연결). 비어 있으면 버튼이 안내만 띄운다.
-  const GOOGLE_FORM_URL = "";
+  // 문의하기 구글 폼 (응답은 구글 폼에 저장). 비어 있으면 버튼이 안내만 띄운다.
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfX-9Z9znzxxi_FwYPJwc8NpZ3pUg3LJbKzlIlML0pGDGjZow/viewform";
   const REQUEST_TIMEOUT_MS = 20000;   // 지연/타임아웃 기준 20초
   const MAX_LENGTH = 1000;
 

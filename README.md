@@ -8,7 +8,7 @@
 | 배포 URL | (Vercel 배포 후 기록) |
 | GitHub | `https://github.com/etu9317cw/codyssey_a1_3` (push 후 공개) |
 | 서비스 기획서 | [`서비스_기획서.md`](./서비스_기획서.md) |
-| 증빙 | [`캡처_체크리스트.md`](./캡처_체크리스트.md), [`증빙_AI코딩도구_로그.md`](./증빙_AI코딩도구_로그.md), `evidence/` |
+| 증빙 | [`증빙_AI코딩도구_로그.md`](./증빙_AI코딩도구_로그.md), [`evidence/`](./evidence/) 스크린샷 |
 | 요구사항 대조표 | [`서비스_기획서.md`](./서비스_기획서.md) 10장 (미션 원문 항목별 충족 여부·근거) |
 
 ## 왜 만들었나
@@ -73,12 +73,10 @@ API 키는 서버 함수에서만 쓰입니다. 브라우저는 `/api/ask`만 �
 ├── requirements.txt      # requests
 ├── vercel.json           # 함수 maxDuration 30초, 보안 헤더
 ├── .env.example          # 환경변수 이름과 설명 (값 없음)
-├── .gitignore            # .env·.vercel/·__pycache__·작업 메모 제외
+├── .gitignore            # .env·.vercel/·__pycache__ 등 제외
 ├── 서비스_기획서.md
 ├── 증빙_AI코딩도구_로그.md
-├── 캡처_체크리스트.md
-├── evidence/             # 캡처 이미지
-└── _작업파일/            # PRD, 로컬 서버, 테스트 입력·결과, 미션 원문
+└── evidence/             # 제출 스크린샷(데스크톱·모바일·AI 결과)
 ```
 
 ## 환경 변수
@@ -96,17 +94,18 @@ API 키는 서버 함수에서만 쓰입니다. 브라우저는 `/api/ask`만 �
 
 ## 로컬 실행
 
-Python 3.10 이상, `requests`가 필요합니다.
+Python 3.10 이상, `requests`, Vercel CLI(Node.js)가 필요합니다.
 
 ```
 pip install -r requirements.txt
 copy .env.example .env          # 값 채우기
-python _작업파일/local_server.py   # http://localhost:3000
+npm i -g vercel
+vercel dev                      # http://localhost:3000 (Vercel 로그인·프로젝트 연결 필요)
 ```
 
-`_작업파일/local_server.py`는 표준 라이브러리 `http.server`로 정적 파일을 서빙하고 `/api/ask`를 `api/ask.py`의 핸들러로 넘깁니다. Vercel과 같은 `BaseHTTPRequestHandler` 인터페이스라 코드 수정 없이 로컬에서 같은 함수를 검증할 수 있습니다. `vercel dev`를 써도 됩니다.
+`vercel dev`는 정적 파일과 `api/ask.py` 함수를 배포 환경과 같은 방식으로 로컬에서 실행합니다. 개발 중 검증은 표준 라이브러리 `http.server`로 만든 간이 서버(저장소에는 넣지 않음)로 했습니다. `api/ask.py`가 Vercel과 같은 `BaseHTTPRequestHandler` 인터페이스라 코드 수정 없이 같은 함수를 호출할 수 있습니다.
 
-로컬 검증 결과(T1~T8, 정상 3·빈 입력·긴 입력·오류 유도·범위 밖·길이 초과)는 `_작업파일/테스트_결과.md`에 있습니다.
+로컬 검증 결과(T1~T8, 정상 3·빈 입력·긴 입력·오류 유도·범위 밖·길이 초과) 요약은 [`증빙_AI코딩도구_로그.md`](./증빙_AI코딩도구_로그.md) 5장에 있습니다.
 
 ## 배포 방법 (GitHub → Vercel)
 

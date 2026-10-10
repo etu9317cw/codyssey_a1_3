@@ -5,8 +5,8 @@
 
 | 항목 | 값 |
 |---|---|
-| 배포 URL | (Vercel 배포 후 기록) |
-| GitHub | `https://github.com/etu9317cw/codyssey_a1_3` (push 후 공개) |
+| 배포 URL | https://codysseya13.vercel.app |
+| GitHub | https://github.com/etu9317cw/codyssey_a1_3 |
 | 서비스 기획서 | [`서비스_기획서.md`](./서비스_기획서.md) |
 | 증빙 | [`증빙_AI코딩도구_로그.md`](./증빙_AI코딩도구_로그.md), [`evidence/`](./evidence/) 스크린샷 |
 | 요구사항 대조표 | [`서비스_기획서.md`](./서비스_기획서.md) 10장 (미션 원문 항목별 충족 여부·근거) |
